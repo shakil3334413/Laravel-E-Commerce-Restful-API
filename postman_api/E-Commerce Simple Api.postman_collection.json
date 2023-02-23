@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "3881beac-5f5a-4d76-9e75-308202a77a1d",
+		"name": "E-Commerce Simple Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9123610"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "All Product Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Product Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/21",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Iphone 14\",\r\n    \"description\" : \"Iphone 14 Pro Max\",\r\n    \"stock\" : \"60\",\r\n    \"price\": \"1200000\",\r\n    \"discount\": \"10\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Iphone 13 Pro Max\",\r\n    \"price\" :\"4555\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/103",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"103"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Review Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\" : \"Unknow\",\r\n    \"star\" : 4,\r\n    \"review\" : \"Not Bad Product\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/133/reviews",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"133",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"star\" : 5,\r\n    \"review\" : \"Not Bad Product\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/133/reviews/401",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"133",
+								"reviews",
+								"401"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/133/reviews/401",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"133",
+								"reviews",
+								"401"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Product All Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/products/1/reviews",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OAuth",
+			"item": [
+				{
+					"name": "OAuth Token Generate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"grant_type\" :\"password\",\r\n    \"client_id\" : \"2\",\r\n    \"client_secret\" : \"jB9arKgtDskuDEgk5JP3941F1NBCyD49XcBDFUFV\",\r\n    \"username\" : \"giovanny.lang@example.org\",\r\n    \"password\" :\"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/oauth/token",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single User Found Bearer Token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
